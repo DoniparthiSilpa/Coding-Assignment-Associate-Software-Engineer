@@ -1,0 +1,133 @@
+3.HTML
+A.
+
+
+HTML:
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly>
+    <div class="buttons">
+      <button onclick="appendNumber(7)">7</button>
+      <button onclick="appendNumber(8)">8</button>
+      <button onclick="appendNumber(9)">9</button>
+      <button onclick="appendOperator('+')">+</button>
+      <button onclick="appendNumber(4)">4</button>
+      <button onclick="appendNumber(5)">5</button>
+      <button onclick="appendNumber(6)">6</button>
+      <button onclick="appendOperator('-')">-</button>
+      <button onclick="appendNumber(1)">1</button>
+      <button onclick="appendNumber(2)">2</button>
+      <button onclick="appendNumber(3)">3</button>
+      <button onclick="appendOperator('*')">*</button>
+      <button onclick="appendNumber(0)">0</button>
+      <button onclick="appendOperator('/')">/</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="clearResult()">C</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+CSS (style.css):
+css
+.calculator {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+#result {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+}
+
+
+JavaScript (script.js):
+javascript
+let result = document.getElementById('result');
+let equation = '';
+
+function appendNumber(number) {
+  equation += number;
+  result.value = equation;
+}
+
+function appendOperator
+
+
+
+
+B.
+
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Survey Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <form id="surveyForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    
+    <label for="firstTime">Is this your first time using our products & service?</label>
+    <select id="firstTime" required>
+      <option value="">Select an option</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    
+    <label for="recommendation">Would you recommend us to your friends and colleagues?</label>
+    <select id="recommendation" required>
+      <option value="">Select an option</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    
+    <label for="satisfaction">How satisfied are you with our company overall?</label>
+    <select id="satisfaction" required>
+      <option value="">Select an option</option>
+      <option value="Satisfied">Satisfied</option>
+      <option value="Undecided">Undecided</option>
+      <option value="Unsatisfied">Unsatisfied</option>
+    </select>
+    
+    <label for="suggestion">Do you have any suggestions to improve our service?</label>
+    <textarea id="suggestion"></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
